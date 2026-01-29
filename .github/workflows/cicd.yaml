@@ -25,7 +25,7 @@ jobs:
         docker build --no-cache \
           -t ghcr.io/hamza-2244/devsecops-app:$VERSION \
           -t ghcr.io/hamza-2244/devsecops-app:latest \
-          -f app/DockerFile app/
+          -f app/DockerFile .
 
     - name: Scan Image with Trivy
       uses: aquasecurity/trivy-action@0.20.0
